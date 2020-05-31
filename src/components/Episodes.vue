@@ -2,7 +2,7 @@
   <div>
     <div class="episodes" v-if="!loading">
       <div class="episode" v-for="(episode, id) in episodes" :key="id" @click="play(season, id)">
-        <img :src="'/img/ep/' + episode.image" :alt="episode.name">
+        <img :src="'/img/ep/' + episode.image + '-min.jpg'" :alt="episode.name">
         <div class="number">Épisode {{ id }}</div>
         <div class="play"><i class="fas fa-play"></i></div>
       </div>
@@ -45,7 +45,7 @@
 
         for (const [/*id*/, episode] of Object.entries(this.episodes)) {
           const img = new Image();
-          img.src = '/img/ep/' + episode.image;
+          img.src = '/img/ep/' + episode.image + '-min.jpg';
 
           img.onload = () => {
             imageLoaded++;

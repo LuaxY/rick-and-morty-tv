@@ -43,7 +43,7 @@
           title: id + ' - ' + episode.name,
           file: "https://content.jwplatform.com/manifests/yp34SRmf.m3u8",
           //file: episode.stream,
-          image: '/img/ep/' + episode.image,
+          image: '/img/ep/' + episode.image + '.jpg',
           mediaid: id,
         };
 
