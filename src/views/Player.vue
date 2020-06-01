@@ -1,3 +1,4 @@
+<script src="../../../../Downloads/wn/web/web/resources/js/player.js"></script>
 <template>
   <div class="player">
     <div class="back" @click="stop">
@@ -10,6 +11,7 @@
 <script>
   /*global jwplayer*/
   import data from '@/data.json';
+  import {mapState} from "vuex";
 
   export default {
     name: "Player",
@@ -20,6 +22,10 @@
       }
     },
 
+    computed: mapState([
+      'lang'
+    ]),
+
     mounted() {
       this.play();
     },
@@ -29,26 +35,58 @@
         const seasonNumber = this.$route.params.season;
         const episodeNumber = this.$route.params.episode;
 
-        console.log(this.data);
-
         const episode = this.data.seasons[seasonNumber].episodes[episodeNumber];
-
-        let player = jwplayer("player");
-
-        console.log(episode);
-
         const id = this.id(seasonNumber, episodeNumber);
+        let player = jwplayer("player");
 
         let config = {
           title: id + ' - ' + episode.name,
-          file: "https://content.jwplatform.com/manifests/yp34SRmf.m3u8",
-          //file: episode.stream,
+          file: episode.stream,
           image: '/img/ep/' + episode.image + '.jpg',
           mediaid: id,
         };
 
+        config.tracks = [];
+
+        if (episode.subtitles) {
+          Object.entries(episode.subtitles).forEach(([lang, url]) => {
+            config.tracks.push({
+              file: url,
+              label: lang,
+              kind: "captions",
+            });
+          });
+        }
+
         player.setup(config);
-        //player.play();
+
+        let langSet = false;
+        let self = this;
+
+        player.on('audioTracks', function (levels) {
+          if (langSet) {
+            return
+          }
+
+          langSet = true;
+
+          if (levels.tracks[levels.currentTrack].language !== self.lang) {
+            for (const i in levels.tracks) {
+              if (levels.tracks[i].language === self.lang) {
+                setTimeout(function () {
+                  player.setCurrentAudioTrack(i);
+                }, 200)
+                break
+              }
+            }
+          }
+        })
+
+        player.on('audioTrackChanged', function (levels) {
+          self.$store.commit('changeLang', levels.tracks[levels.currentTrack].language);
+        })
+
+        player.play();
         //player.setFullscreen(true);
       },
 

@@ -6,6 +6,7 @@ Vue.use(Vuex)
 export default new Vuex.Store({
   state: {
     active: 4,
+    lang: "fr",
   },
   mutations: {
     initialiseStore(state) {
@@ -17,6 +18,9 @@ export default new Vuex.Store({
     },
     changeActive(state, id) {
       state.active = id
+    },
+    changeLang(state, lang) {
+      state.lang = lang
     }
   },
   actions: {},

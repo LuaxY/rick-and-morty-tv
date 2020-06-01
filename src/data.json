@@ -5,57 +5,90 @@
         "1": {
           "name": "De la graine de héros",
           "image": "1x1-0",
-          "stream": ""
+          "stream": "https://storage.googleapis.com/nitro-encoder/rick-and-morty-1-1/master.m3u8",
+          "subtitles": {
+            "Francais": "https://storage.googleapis.com/nitro-encoder/rick-and-morty-1-1/subtitles_fra.srt"
+          }
         },
         "2": {
           "name": "I, croquette",
           "image": "1x2-0",
-          "stream": ""
+          "stream": "https://storage.googleapis.com/nitro-encoder/rick-and-morty-1-2/master.m3u8",
+          "subtitles": {
+            "Francais": "https://storage.googleapis.com/nitro-encoder/rick-and-morty-1-2/subtitles_fra.srt"
+          }
         },
         "3": {
           "name": "Anatomy Park",
           "image": "1x3-0",
-          "stream": ""
+          "stream": "https://storage.googleapis.com/nitro-encoder/rick-and-morty-1-3/master.m3u8",
+          "subtitles": {
+            "Francais": "https://storage.googleapis.com/nitro-encoder/rick-and-morty-1-3/subtitles_fra.srt"
+          }
         },
         "4": {
           "name": "M. Night Shaym-Aliens!",
-          "image": "1x4-1",
-          "stream": ""
+          "image": "1x4-0",
+          "stream": "https://storage.googleapis.com/nitro-encoder/rick-and-morty-1-4/master.m3u8",
+          "subtitles": {
+            "Francais": "https://storage.googleapis.com/nitro-encoder/rick-and-morty-1-4/subtitles_fra.srt"
+          }
         },
         "5": {
           "name": "La boîte à larbins",
           "image": "1x5-1",
-          "stream": ""
+          "stream": "https://storage.googleapis.com/nitro-encoder/rick-and-morty-1-5/master.m3u8",
+          "subtitles": {
+            "Francais": "https://storage.googleapis.com/nitro-encoder/rick-and-morty-1-5/subtitles_fra.srt"
+          }
         },
         "6": {
           "name": "E-Rick-Xir d'amour",
-          "image": "1x6-0",
-          "stream": ""
+          "image": "1x6-1",
+          "stream": "https://storage.googleapis.com/nitro-encoder/rick-and-morty-1-6/master.m3u8",
+          "subtitles": {
+            "Francais": "https://storage.googleapis.com/nitro-encoder/rick-and-morty-1-6/subtitles_fra.srt"
+          }
         },
         "7": {
           "name": "Gazorpazorp junior",
           "image": "1x7-0",
-          "stream": ""
+          "stream": "https://storage.googleapis.com/nitro-encoder/rick-and-morty-1-7/master.m3u8",
+          "subtitles": {
+            "Francais": "https://storage.googleapis.com/nitro-encoder/rick-and-morty-1-7/subtitles_fra.srt"
+          }
         },
         "8": {
           "name": "Télé... visions",
           "image": "1x8-0",
-          "stream": ""
+          "stream": "https://storage.googleapis.com/nitro-encoder/rick-and-morty-1-8/master.m3u8",
+          "subtitles": {
+            "Francais": "https://storage.googleapis.com/nitro-encoder/rick-and-morty-1-8/subtitles_fra.srt"
+          }
         },
         "9": {
           "name": "La petite bou-Rick des horreurs",
           "image": "1x9-0",
-          "stream": ""
+          "stream": "https://storage.googleapis.com/nitro-encoder/rick-and-morty-1-9/master.m3u8",
+          "subtitles": {
+            "Francais": "https://storage.googleapis.com/nitro-encoder/rick-and-morty-1-9/subtitles_fra.srt"
+          }
         },
         "10": {
           "name": "Rencontres du 3ème Rick",
           "image": "1x10-0",
-          "stream": ""
+          "stream": "https://storage.googleapis.com/nitro-encoder/rick-and-morty-1-10/master.m3u8",
+          "subtitles": {
+            "Francais": "https://storage.googleapis.com/nitro-encoder/rick-and-morty-1-10/subtitles_fra.srt"
+          }
         },
         "11": {
           "name": "Ricksy Business",
           "image": "1x11-0",
-          "stream": ""
+          "stream": "https://storage.googleapis.com/nitro-encoder/rick-and-morty-1-11/master.m3u8",
+          "subtitles": {
+            "Francais": "https://storage.googleapis.com/nitro-encoder/rick-and-morty-1-11/subtitles_fra.srt"
+          }
         }
       }
     },
@@ -63,12 +96,12 @@
       "episodes": {
         "1": {
           "name": "Effet Rick-ochet",
-          "image": "2x1-2",
+          "image": "2x1-0",
           "stream": ""
         },
         "2": {
           "name": "Prout, l'extra-terrestre",
-          "image": "2x2-1",
+          "image": "2x2-0",
           "stream": ""
         },
         "3": {
@@ -98,7 +131,7 @@
         },
         "8": {
           "name": "Cable interdimensionnel 2 : tenter le destin",
-          "image": "2x8-0",
+          "image": "2x8-1",
           "stream": ""
         },
         "9": {
