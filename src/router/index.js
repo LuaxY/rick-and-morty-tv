@@ -2,6 +2,8 @@ import Vue from 'vue'
 import VueRouter from 'vue-router'
 import Home from '../views/Home.vue'
 import Player from '../views/Player.vue'
+import About from '../views/About.vue'
+import DMCA from '../views/DMCA.vue'
 
 Vue.use(VueRouter)
 
@@ -13,9 +15,21 @@ const routes = [
   },
 
   {
-    path: '/:season/:episode',
+    path: '/w/:season/:episode',
     name: 'watch',
     component: Player
+  },
+
+  {
+    path: '/about',
+    name: 'about',
+    component: About
+  },
+
+  {
+    path: '/dmca',
+    name: 'dmca',
+    component: DMCA,
   }
 ]
 

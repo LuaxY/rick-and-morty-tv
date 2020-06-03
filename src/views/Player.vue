@@ -48,6 +48,13 @@
 
         config.tracks = [];
 
+        if (episode.thumbnails) {
+          config.tracks.push({
+            file: episode.thumbnails,
+            kind: "thumbnails"
+          });
+        }
+
         if (episode.subtitles) {
           Object.entries(episode.subtitles).forEach(([lang, url]) => {
             config.tracks.push({
@@ -56,6 +63,14 @@
               kind: "captions",
             });
           });
+        }
+
+        if (episode.drm) {
+          config.drm = {
+            widevine: {
+              url: episode.drm,
+            }
+          }
         }
 
         player.setup(config);
