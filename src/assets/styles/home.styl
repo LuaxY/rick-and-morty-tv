@@ -1,5 +1,8 @@
 .home
-  @apply mt-5 flex-grow
+  @apply mt-5 px-2 flex-grow
+
+  @media(min-width: theme('screens.md'))
+    @apply px-0
 
   .loader
     @apply flex w-full justify-center mt-20
@@ -14,6 +17,12 @@
       border-color rgba(255, 255, 255, 0.1)
       color #E2E2E2
 
+      span
+        @apply hidden
+
+        @media(min-width: theme('screens.md'))
+          @apply inline-block
+
       &:last-child
         @apply border-none
 
@@ -21,13 +30,10 @@
         background-color #202020
 
   .episodes
-    @apply grid grid-cols-1 gap-8 mt-10
-
-    @media(min-width: theme('screens.sm'))
-      @apply grid-cols-2
+    @apply grid grid-cols-2 gap-8 mt-5
 
     @media(min-width: theme('screens.md'))
-      @apply grid-cols-3
+      @apply grid-cols-3 mt-10
 
     .episode
       @apply relative justify-between rounded-lg shadow-md text-center uppercase font-bold overflow-hidden cursor-pointer bg-black

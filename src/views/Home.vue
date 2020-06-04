@@ -4,7 +4,7 @@
       <div class="seasons">
         <div class="season" v-for="(season, id) in data.seasons" :key="id" @click="changeSeason(id)"
              :class="{ active: active === Number(id) }">
-          Saison {{ id }}
+          <span>Saison</span> {{ id }}
         </div>
       </div>
 
